@@ -41,3 +41,15 @@ mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approa
 - a) *Dedicated network per output coefficient*. In an effort to achieve smaller mismatches by manipulating the output, we used a dedicated training net- work for each coefficient. For the baseline case examined in this work, we therefore used 18 networks for the amplitude and 8 networks for the phase.
 
 - b) *Output augmentation*. Finally, another idea to push the network to learn the desired output, was to insert a new branch with a function $f(y)$. For that reason, the quantity $(1 − y)$ was added as an extra output for the training network.
+
+<p align = "center">
+<img src="/figures/couples1.png"  width="450" height="350">
+</p>
+
+<p align = "center">
+<img src="/figures/couples2.png"  width="450" height="350">
+</p>
+
+<p align = "justify">
+Violin plots comparing the mismatches for different variants of the ANN surrogate model without (left panel for each variant) and with the addition of a network that models the residual error (right panel for each variant).The middle horizontal line marks the median and the extent of the lines show the minimum and maximum values. In each panel, the envelope is proportional to the density of points. A significant reduction of the mismatch is achieved in several variants.
+</p>
