@@ -22,3 +22,26 @@ Display equation: $$equation$$
 
 - Following [Khan & Green](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.103.064015/), we use neural networks to map the input $\lambda$ to the coefficients from the empirical nodes $T_j$.  
 - After testing to work with complex form of waveforms, two separate networks are used; one for the amplitude and one for the phase of the waveforms, for better results.
+
+**3) Improvement through Residual Errors Network**
+
+The first improvement (which also turned out to be the most significant) was obtained by adding a second network (after the training) which can make predictions for the errors of the first network.  We remind that for the baseline model, the first network  had three-dimensional input $\{\boldsymbol{\lambda_i}\}_{i=1}^{N}$  and produced predictions $\hat{\boldsymbol{y}}(\boldsymbol{\lambda})$ (for an arbitrary $\boldsymbol{\lambda}$) with 18 dimensions for the amplitude and 8 for the phase network. For all $N$ ${\boldsymbol{\lambda}_i}$ in the training set, one can obtain the corresponding predictions  $\{\hat{\boldsymbol{y}}(\boldsymbol{\lambda}_i)\}$ and calculate the *residual* 
+
+$$\boldsymbol{e}_i \equiv \boldsymbol{y}(\boldsymbol{\lambda}_i) - \hat {\boldsymbol{y}}(\boldsymbol{\lambda}_i)$$ where $\boldsymbol{y}$ is the ground truth.
+
+**4) Exploration of Feature Space and Output Manipulation**
+
+**4.1) Feature Space Manipulation:**
+
+- a) *Exploitation of similarities between waveforms*. One such idea was to enlarge the input parameter space to four-dimensional, by adding a new parameter that describes physical relations between different waveforms
+
+- b) *Augmentation of the training set*. Next, we tried to improve the problem of the presence of the worst mismatches at boundary values of the
+mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approached, we first tried to augment the dataset with additional input samples $1/q$, $χ2$, $χ1$.
+
+- c) *Dissection of the input space*. Another tactic that was followed was that of dissecting the input feature space into a number of K groups and evaluate the performance of the networks in each group. To that end, the input was divided to $K = 2$ groups according to the value of the mass ratio $q$ and two separate networks were trained for both cases of amplitude and phase, each followed by its corresponding residual errors network.
+
+**4.2) Output Manipulation**
+
+- a) *Dedicated network per output coefficient*. In an effort to achieve smaller mismatches by manipulating the output, we used a dedicated training net- work for each coefficient. For the baseline case examined in this work, we therefore used 18 networks for the amplitude and 8 networks for the phase.
+
+- b) *Output augmentation*. Finally, another idea to push the network to learn the desired output, was to insert a new branch with a function $f(y)$. For that reason, the quantity $(1 − y)$ was added as an extra output for the training network.
