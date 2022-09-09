@@ -21,7 +21,7 @@ This is the final step during the process of the creation of a surrogate model, 
 
 **3) Improvement through Residual Errors Network**
 
-The first improvement (which also turned out to be the most significant) was obtained by adding a second network (after the training) which can make predictions for the errors of the first network.  We remind that for the baseline model, the first network  had three-dimensional input $\{\boldsymbol{\lambda_i}\}_{i=1}^{N}$  and produced predictions $\hat{\boldsymbol{y}}(\boldsymbol{\lambda})$ (for an arbitrary $\boldsymbol{\lambda}$) with 18 dimensions for the amplitude and 8 for the phase network. For all $N$ ${\boldsymbol{\lambda}_i}$ in the training set, one can obtain the corresponding predictions  $\{\hat{\boldsymbol{y}}(\boldsymbol{\lambda}_i)\}$ and calculate the *residual* 
+The first improvement (which also turned out to be the most significant) was obtained by adding a second network (after the training) which can make predictions for the errors of the first network.  We remind that for the baseline model, the first network  had three-dimensional input $\{\boldsymbol{\lambda_i}\}_{i=1}^{N}$  and produced predictions $\hat{\boldsymbol{y}}(\boldsymbol{\lambda})$ (for an arbitrary $\boldsymbol{\lambda}$) with 18 dimensions for the amplitude and 8 for the phase network. For all ${\boldsymbol{\lambda}_i^N}$ in the training set, one can obtain the corresponding predictions  $\{\hat{\boldsymbol{y}}(\boldsymbol{\lambda}_i)\}$ and calculate the *residual* 
 
 $$\boldsymbol{e}_i \equiv \boldsymbol{y}(\boldsymbol{\lambda}_i) - \hat {\boldsymbol{y}}(\boldsymbol{\lambda}_i)$$ where $\boldsymbol{y}$ is the ground truth.
 
