@@ -54,6 +54,9 @@ mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approa
 Violin plots comparing the mismatches for different variants of the ANN surrogate model without (left panel for each variant) and with the addition of a network that models the residual error (right panel for each variant).The middle horizontal line marks the median and the extent of the lines show the minimum and maximum values. In each panel, the envelope is proportional to the density of points. A significant reduction of the mismatch is achieved in several variants.
 </p>
 
+# Running this Project
+
+
 # Citation
 
 Our work has been submitted in the arXiv preprint database [Deep Residual Error and Bag-of-Tricks Learning for Gravitational Wave Surrogate Modeling.](https://arxiv.org/abs/2203.08434/)
