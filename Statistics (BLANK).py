@@ -26,10 +26,10 @@
 # amp_network[3,3] =
 # amp_network[3,4] =
 # print(amp_network)
-amp_network_mean = amp_network.mean(axis=1)
-amp_network_std = amp_network.std(axis=1)
-print('{:3.2e}±{:3.2e}'.format(amp_network_mean[0], amp_network_std[0]))
-print('{:3.2e}±{:3.2e}'.format(amp_network_mean[1], amp_network_std[1]))
+#amp_network_mean = amp_network.mean(axis=1)
+#amp_network_std = amp_network.std(axis=1)
+#print('{:3.2e}±{:3.2e}'.format(amp_network_mean[0], amp_network_std[0]))
+#print('{:3.2e}±{:3.2e}'.format(amp_network_mean[1], amp_network_std[1]))
 # print('{:3.2e}+/-{:3.2e}'.format(amp_network_mean[2], amp_network_std[2]))
 # print('{:3.2e}+/-{:3.2e}'.format(amp_network_mean[3], amp_network_std[3]))
 # #
