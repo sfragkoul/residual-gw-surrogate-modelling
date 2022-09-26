@@ -54,6 +54,25 @@ mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approa
 Violin plots comparing the mismatches for different variants of the ANN surrogate model without (left panel for each variant) and with the addition of a network that models the residual error (right panel for each variant).The middle horizontal line marks the median and the extent of the lines show the minimum and maximum values. In each panel, the envelope is proportional to the density of points. A significant reduction of the mismatch is achieved in several variants.
 </p>
 
+**5) Baseline model architecture exploration**
+
+Another direction that was explored was that of the architecture of the baseline model. Two types of experiments were tried out, one of shallower models and one of deeper. Both the number of hidden layers and nodes per hidden layer were part of this experimentation. Specifically, for the shallow networks three scenarios were put to test, the input and output layers were kept the same but the hidden layers were altered to a) a single layer with 160 nodes, b) 2 layers with 320 nodes each, c) 4 layers with 160 nodes and for the deeper architecture version hidden layers were altered to a) 4 layers with 640 nodes and b) 8 layers with 320 nodes each. All of the evaluated architectures achieve more or less the same results, with one exception: the shallow network with one layer of 160 neurons performs significantly worse. The idea of residual errors network was also tried during the experiments which concerned the architecture of the baseline model. In all cases the architecture of the residual errors network was not altered and kept with 4 hidden layers with 320 nodes in each one of them. As shown the best choice for baseline model is that of 4 hidden layers with 320 nodes in each of them, followed by a residual errors network with the same architecture.
+
+<p align = "center">
+<img src="/figures/baseline_net_architecture_no_res.png"  width="550" height="450">
+</p>
+
+<p align = "center">
+<img src="/figures/baseline_net_architecture_with_res.png"  width="550" height="400">
+</p>
+
+<p align = "justify">
+Violin plots comparing the mismatches (for the validation set) between the various baseline network architectures. The middle horizontal line marks the median and the extent of the lines show the minimum and maximum values. In each panel, the envelope is proportional to the density of points. Above the plots the first number corresponds to the number of hidden layers while the second is the number of nodes in each hidden layer. On top the resutls without the residual error network are presemted and the beottom figure corresponds to the addition of the residual error network.
+</p>
+
+
+
+
 # Running this Project
 The scripts can be ran independently and the numbering corresponds to that in *Exploration of Feature Space and Output Manipulation* section.
 
