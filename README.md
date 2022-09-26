@@ -55,7 +55,7 @@ Violin plots comparing the mismatches for different variants of the ANN surrogat
 </p>
 
 # Running this Project
-
+The scripts can be ran independently and the numbering corresponds to that in *Exploration of Feature Space and Output Manipulation* section.
 
 # Citation
 
