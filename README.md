@@ -10,7 +10,7 @@ This is the final step during the process of the creation of a surrogate model, 
 
 **1) Creating a Surrogate Model**
 
-- A training of $N$ waveforms was created, using [SEOBNRv4](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.95.044028/) with [PyCBC](https://zenodo.org/record/4849433/),  $\{ h_i(t; \lambda_i) \}_{i=1}^{N}$ where $\lambda = (q, x_1,x_2)$, $q=\frac{m1}{m2}$ is the mass   ratio $1\leq q \leq 8$,  $-0.99\leq χ_1 \leq 0.99$ and  $-0.99\leq χ_2 \leq 0.99$ are the spins.
+- A training of $N$ waveforms was created, using [SEOBNRv4](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.95.044028/) with [PyCBC](https://zenodo.org/record/4849433/),  $\{ h_i(t; \lambda_i) \}_{i=1}^{N}$ where $\lambda = (q, χ_1,χ_2)$, $q=\frac{m1}{m2}$ is the mass   ratio $1\leq q \leq 8$,  $-0.99\leq χ_1 \leq 0.99$ and  $-0.99\leq χ_2 \leq 0.99$ are the spins.
 - Greedy algorithm selects $m < N$ waveforms (and their $\lambda$ values), which create the reduced basis $\{e_i\}_{i=1}^{m}$ for a given tolerance.
 - the Empirical Interpolation (EIM) algorithm finds informative time points (empirical nodes $\{ T_i \}_{i=1}^{m}$) that can be used to reconstruct the whole waveform for arbitrary $\lambda$.
 
