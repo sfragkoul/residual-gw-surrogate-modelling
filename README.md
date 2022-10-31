@@ -10,7 +10,7 @@ This is the final step during the process of the creation of a surrogate model, 
 
 **1) Creating a Surrogate Model**
 
-- A training of $N$ waveforms was created, using [SEOBNRv4](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.95.044028/) with [PyCBC](https://zenodo.org/record/4849433/),  $\{ h_i(t; \lambda_i) \}_{i=1}^{N}$ where $\lambda = (q, x_1,x_2)$, $q=\frac{m1}{m2}$ is the mass   ratio $1\leq q \leq 8$,  $-1\leq x_1 \leq 1$ and  $-1\leq x_2 \leq 1$ are the spins.
+- A training of $N$ waveforms was created, using [SEOBNRv4](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.95.044028/) with [PyCBC](https://zenodo.org/record/4849433/),  $\{ h_i(t; \lambda_i) \}_{i=1}^{N}$ where $\lambda = (q, x_1,x_2)$, $q=\frac{m1}{m2}$ is the mass   ratio $1\leq q \leq 8$,  $-0.99\leq χ_1 \leq 0.99$ and  $-0.99\leq χ_2 \leq 0.99$ are the spins.
 - Greedy algorithm selects $m < N$ waveforms (and their $\lambda$ values), which create the reduced basis $\{e_i\}_{i=1}^{m}$ for a given tolerance.
 - the Empirical Interpolation (EIM) algorithm finds informative time points (empirical nodes $\{ T_i \}_{i=1}^{m}$) that can be used to reconstruct the whole waveform for arbitrary $\lambda$.
 
@@ -32,7 +32,7 @@ $$\boldsymbol{e}_i \equiv \boldsymbol{y}(\boldsymbol{\lambda}_i) - \hat {\boldsy
 - a) *Exploitation of similarities between waveforms*. One such idea was to enlarge the input parameter space to four-dimensional, by adding a new parameter that describes physical relations between different waveforms
 
 - b) *Augmentation of the training set*. Next, we tried to improve the problem of the presence of the worst mismatches at boundary values of the
-mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approached, we first tried to augment the dataset with additional input samples $1/q$, $χ2$, $χ1$.
+mass ratio and spins. As a remedy for the large mismatch when $q = 1$ was approached, we first tried to augment the dataset with additional input samples $1/q$, $χ_2$, $χ_1$.
 
 - c) *Dissection of the input space*. Another tactic that was followed was that of dissecting the input feature space into a number of K groups and evaluate the performance of the networks in each group. To that end, the input was divided to $K = 2$ groups according to the value of the mass ratio $q$ and two separate networks were trained for both cases of amplitude and phase, each followed by its corresponding residual errors network.
 
