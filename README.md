@@ -25,6 +25,13 @@ The first improvement (which also turned out to be the most significant) was obt
 
 $$\boldsymbol{e}_i \equiv \boldsymbol{y}(\boldsymbol{\lambda}_i) - \hat {\boldsymbol{y}}(\boldsymbol{\lambda}_i)$$ where $\boldsymbol{y}$ is the ground truth.
 
+A schematic graph of the implemented models is shown in the Figure below. Both models take as input the parameters $\boldsymbol{\lambda}$. The baseline models are trained first, to predict amplitude and phase coefficients. Then, the residual errors are computed and the residual model is trained to predict these. The final predictions are the sum of the outputs of the two models.
+
+<p align = "center">
+<img src="/figures/Model_schematic.png"  width="400" height="400">
+</p>
+
+
 **4) Exploration of Feature Space and Output Manipulation**
 
 **4.1) Feature Space Manipulation:**
