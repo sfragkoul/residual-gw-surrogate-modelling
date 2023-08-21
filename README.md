@@ -78,11 +78,16 @@ Violin plots comparing the mismatches (for the validation set) between the vario
 </p>
 
 
-
-
 # Running this Project
 The scripts can be ran independently and the numbering corresponds to that in *Exploration of Feature Space and Output Manipulation* section.
 
+# Contribute
+
+We welcome any sort of contribution!
+If you have any developer-related questions, please open an issue or write us at sfragkoul@certh.gr.
+
 # Citation
 
-Our work has been submitted in the arXiv preprint database [Deep Residual Error and Bag-of-Tricks Learning for Gravitational Wave Surrogate Modeling.](https://arxiv.org/abs/2203.08434/)
+Our work has been published in [*Applied Soft Computing*](https://www.sciencedirect.com/journal/applied-soft-computing). Please, use the citation as follows: 
+
+S.-C. Fragkouli, P. Nousi, N. Passalis, P. Iosif, N. Stergioulas, and A. Tefas, “Deep residual error and bag-of-tricks learning for gravitational wave surrogate modeling,” *Applied Soft Computing*, p. 110746, 2023, doi: [10.1016/j.asoc.2023.110746](https://doi.org/10.1016/j.asoc.2023.110746).
