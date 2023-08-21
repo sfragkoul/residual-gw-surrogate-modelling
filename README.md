@@ -2,7 +2,7 @@
 
 **MSc "Digital Media & Computational Intelligence", Department of Informatics, Aristotle University of Thessaloniki, September 2021**
 
-Supervisor: Anastasios Tefas, *In collaboration with Virgo group at AUTh*
+Supervisor: Anastasios Tefas, *In collaboration with [Virgo group at AUTh](https://niksterg.github.io/gw-group/)*
 
 
 This is the code of the experiments during my master Thesis. 
